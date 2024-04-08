@@ -13,7 +13,7 @@ import java.util.*;
 @Service
 public class FakeStoreProductService implements ProductService{
     @Override
-    public Product getProductByID(long id) {
+    public Product getProductByID(Long id) {
 
         RestTemplate restTemplate = new RestTemplate();
 
@@ -37,12 +37,17 @@ public class FakeStoreProductService implements ProductService{
         return list1;
     }
 
+    @Override
+    public Product createProduct(Product product) {
+        return null;
+    }
+
     private Product convertProductDTOtoProduct(FakeStoreProductDTO fakeStoreProductDTO){
         Product product = new Product();
 
         product.setId(fakeStoreProductDTO.getId());
         product.setCategory(new Category());
-        product.getCategory().setId(1);
+        product.getCategory().setId(1L);
         product.getCategory().setDescription("Hemkesh");
         product.getCategory().setTitle("Hemkesh");
 

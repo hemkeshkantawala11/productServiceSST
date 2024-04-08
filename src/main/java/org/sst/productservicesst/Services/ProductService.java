@@ -5,6 +5,7 @@ import org.sst.productservicesst.Models.Product;
 import java.util.List;
 
 public interface ProductService {
-    Product getProductByID(long id);
+    Product getProductByID(Long id);
     List<Product> getAllProducts();
+    Product createProduct(Product product);
 }

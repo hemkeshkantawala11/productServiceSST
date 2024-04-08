@@ -7,7 +7,7 @@ import org.sst.productservicesst.Models.Category;
 @Getter
 @Setter
 public class FakeStoreProductDTO {
-    private long id;
+    private Long id;
     private String title;
     private double price;
     private String category;
